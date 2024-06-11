@@ -3,3 +3,12 @@
 define service ZAUTO_PARTS_SRV {
   expose ZV_AUTO_PARTS as AutoParts;
 }
+
+" Service Binding
+defining service: ZAUTO_PARTS_SRV {
+  binding {
+    expose: AutoParts {
+      resource path: 'AutoParts';
+    }
+  }
+}
